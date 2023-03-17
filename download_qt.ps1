@@ -1,4 +1,4 @@
-# Shout out to @itm4n to make our this script! Thanks!
+# Shout out to @itm4n for making this script! Thanks!
 $DestinationFolder = "C:\Qt"
 $QtVersion = "qt5_5152"
 $Target = "msvc2019"
