@@ -1,4 +1,5 @@
 # Shout out to @itm4n for making this script! Thanks!
+# Original blog link: https://itm4n.github.io/fuzzing-windows-rpc-rpcview/#downloading-and-running-rpcview-for-the-first-time
 $DestinationFolder = "C:\Qt"
 $QtVersion = "qt5_5152"
 $Target = "msvc2019"
