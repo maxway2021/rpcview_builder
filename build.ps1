@@ -1,5 +1,5 @@
 # WARNING! 
-# This script only working if you launch it from Visual Studio Developer Command Line.
+# This script only works if you launch it from Visual Studio Developer Command Line.
 
 # START_CONFIG
 $oldBuild = "6000324D70000"
