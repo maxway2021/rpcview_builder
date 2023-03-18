@@ -3,7 +3,8 @@
 
 # START_CONFIG
 $oldBuild = "6000324D70000"
-$loc = ".\RpcCore\RpcCore4_64bits\RpcInternals.h"
+$loc_x64 = ".\RpcCore\RpcCore4_64bits\RpcInternals.h"
+$loc_x86 = ".\RpcCore\RpcCore4_32bits\RpcInternals.h"
 $gitURL = "https://github.com/silverf0x/RpcView.git"
 # END_CONFIG
 
@@ -36,7 +37,8 @@ echo "[+] Done"
 cd .\RpcView
 git checkout -qf 68aef3f2d8292ecbf243d9cff4844fe98e59f6f0 # Took from https://ci.appveyor.com/project/silverf0x/rpcview#L5
 mkdir .\Build\x64
-((Get-Content -path $loc -Raw) -replace $oldBuild,$patch) | Set-Content -Path $loc
+((Get-Content -path $loc_x64 -Raw) -replace $oldBuild,$patch) | Set-Content -Path $loc_x64
+((Get-Content -path $loc_x86 -Raw) -replace $oldBuild,$patch) | Set-Content -Path $loc_x86
 echo "[+] New Windows version patch finished. Starting compile process"
 cd .\Build\x64
 $env:CMAKE_PREFIX_PATH="C:\Qt\5.15.2\msvc2019_64"
